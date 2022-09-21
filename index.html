@@ -44,7 +44,6 @@
             <li class="nav-item">
                 <a id="name_user" class="nav-link disabled"></a>
             <li class="nav-item">
-                <a id="signout" class="nav-link disabled" href="/Signin/login.html">signout</a>
             </li>
             </li>
         </ul>
@@ -280,7 +279,7 @@ function delete1(id) {
 <script>
     let nameUser=window.localStorage.getItem('name_key');
     if (nameUser!=null){
-document.getElementById('register').innerHTML=''
+        document.getElementById('register').innerHTML=''
         document.getElementById('login').innerHTML=''
         document.getElementById('name_user').innerHTML=nameUser
     }
