@@ -50,14 +50,16 @@
     </div>
 </section>
 <script>
+    let username;
+    let password;
     function login(){
 
         let listUser=JSON.parse(window.localStorage.getItem('list_user'));
-        let username=document.getElementById('username').value;
-        let password=document.getElementById('password').value;
+         username=document.getElementById('username').value;
+         password=document.getElementById('password').value;
         for (let i = 0; i <listUser.length ; i++) {
             if (username===listUser[i].username||password===listUser[i].password){
-                window.localStorage.setItem('name_key',listUser[i].name)
+                window.localStorage.setItem('name_key',JSON.stringify(username))
                 window.location.href='/'
             }
         }

@@ -94,6 +94,7 @@
     let productList=[]
     productList.push(product1,product2);
     let nameKey=window.localStorage.getItem('name_key');
+    console.log('------------',nameKey)
     window.localStorage.setItem('list_product',JSON.stringify(productList))
     let idupdate;
     let iddelete;
@@ -158,13 +159,12 @@
             modal.find('.modal-body input').val(recipient)
         })
         if (nameKey===null){
-            document.getElementById('edit_id').style.display='none'
-            document.getElementById('delete_id').style.display='none'
-            let td_button=document.getElementById('td_button');
+            let td_button=document.getElementsByClassName('td_button');
             for (let i = 0; i <td_button.length ; i++) {
                 td_button[i].style.display='none'
             }
         }
+
     }
     showListProduct()
     function createProduct(){
