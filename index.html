@@ -95,7 +95,7 @@
     let product2 = new Product(2,'iphone X' , '1200$',3)
     let productList=[]
     productList.push(product1,product2);
-    let nameKey=window.localStorage.getItem('name_key');
+    // let nameKey=window.localStorage.getItem('name_key');
     console.log('------------',nameKey)
     window.localStorage.setItem('list_product',JSON.stringify(productList))
     let idupdate;
@@ -276,13 +276,13 @@ function delete1(id) {
     </div>
     <!-- Copyright -->
 </footer>
-<script>
-    let nameUser=window.localStorage.getItem('name_key');
-    if (nameUser!=null){
-        document.getElementById('register').innerHTML=''
-        document.getElementById('login').innerHTML=''
-        document.getElementById('name_user').innerHTML=nameUser
-    }
-</script>
+<!--<script>-->
+<!--    let nameUser=window.localStorage.getItem('name_key');-->
+<!--    if (nameUser!=null){-->
+<!--        document.getElementById('register').innerHTML=''-->
+<!--        document.getElementById('login').innerHTML=''-->
+<!--        document.getElementById('name_user').innerHTML=nameUser-->
+<!--    }-->
+<!--</script>-->
 </body>
  </html>
