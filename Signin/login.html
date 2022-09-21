@@ -19,7 +19,7 @@
                         <h3 class="mb-5">Sign in</h3>
 
                         <div class="form-outline mb-4">
-                            <input type="email" id="username" class="form-control form-control-lg" />
+                            <input type="text" id="username" class="form-control form-control-lg" />
                             <label class="form-label">Email</label>
                         </div>
 
@@ -55,10 +55,9 @@
         let username=document.getElementById('username').value;
         let password=document.getElementById('password').value;
         for (let i = 0; i <listUser.length ; i++) {
-            if (username===listUser[i].username&&password===listUser[i].password){
+            if (username===listUser[i].username||password===listUser[i].password){
                 window.location.href='/'
             }
-
         }
     }
 </script>
