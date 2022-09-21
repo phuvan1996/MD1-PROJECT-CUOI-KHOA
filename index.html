@@ -158,8 +158,9 @@
             modal.find('.modal-title').text('update product' + recipient)
             modal.find('.modal-body input').val(recipient)
         })
+        let td_button=document.getElementsByClassName('td_button');
+        console.log('namekEY --->', nameKey)
         if (nameKey===null){
-            let td_button=document.getElementsByClassName('td_button');
             for (let i = 0; i <td_button.length ; i++) {
                 td_button[i].style.display='none'
             }
