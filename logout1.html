@@ -39,7 +39,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a id="login" class="nav-link disabled" href="index.html">Logout</a>
+                <a id="login"  onclick="logoutt()" class="nav-link disabled" href="index.html">Logout</a>
             </li>
             <li class="nav-item">
                 <a id="name_user" class="nav-link disabled"></a>
@@ -91,6 +91,10 @@
     </div>
 </div>
 <script>
+    function logoutt() {
+        window.localStorage.removeItem('name_key');
+        window.location.reload();
+    }
     let product1 = new Product(1,'iphone 7' , '1000$',2);
     let product2 = new Product(2,'iphone X' , '1200$',3)
     let productList=[]
