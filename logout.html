@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>apple.com</title>
+    <script src="Homepage/Product.js"></script>
+    <script src="Signin/User.js"></script>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<body>
+<label id="validate"></label>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a id="register" class="navbar-brand" href="/Signin/register.html/"><i class="bi bi-apple"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/product/detail_product.html">Store</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/product/product1.html">Mac</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Iphone</a>
+                    <a class="dropdown-item" href="#">Watch</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Ipad</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a id="login" class="nav-link disabled" href="/Signin/login.html">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a id="name_user" class="nav-link disabled"></a>
+            <li class="nav-item">
+            </li>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
+        </form>
+    </div>
+</nav>
+<iframe width="1500" height="550" src="https://www.youtube.com/embed/ZqqraWbJWjA" title="Introducing Crash Detection | iPhone 14 Pro | Apple" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<img style="width: 300px" src="https://image-us.24h.com.vn/upload/1-2021/images/2021-03-31/2-1617205179-141-width660height371.jpg" class="rounded">
+<img style="width: 325px" src="https://www.didongmy.com/vnt_upload/news/03_2022/chiem-nguong-hinh-anh-iphone-14-pro-didongmy.jpg" >
+<img style="width: 325px" src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/8/4/1077179/Anh-Chup-Man-Hinh-20-04.png" >
+<img  style="width: 150px" src="http://genk.mediacdn.vn/2018/9/13/ban-nang-cap-dang-cho-doi-cua-apple-watch-da-chinh-thuc-ra-mat-voi-hang-loat-cai-tien-dang-gia-va-thu-vi13-1536777597330917833096.jpg">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQcLwUNJjVmDaHspZb9jaVCVxH5jhkkTibag&usqp=CAU">
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="input-group mb-3">
+                <input id="name" type="text" class="form-control" placeholder="tên sản phẩm" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <span class="input-group-text">TÊN SẢN PHẨM</span>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input id="gia" type="text" class="form-control" placeholder="giá" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <h6 id="hienThi"></h6>
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">GIÁ</span>
+                </div>
+            </div>
+            <button  class="btn btn-success" onclick="createProduct()"> create Product</button>
+            <table class="table">
+                <tr class="table-danger">
+                    <th>STT</th>
+                    <th>TÊN SẢN PHẨM</th>
+                    <th>GIÁ</th>
+                    <th class="td_button">EDIT</th>
+                    <th class="td_button">DELETE</th>
+                </tr>
+                <tbody id="drawTable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    let product1 = new Product(1,'iphone 7' , '1000$',2);
+    let product2 = new Product(2,'iphone X' , '1200$',3)
+    let productList=[]
+    productList.push(product1,product2);
+    // let nameKey=window.localStorage.getItem('name_key');
+    // console.log('------------',nameKey)
+    window.localStorage.setItem('list_product',JSON.stringify(productList))
+    let idupdate;
+    let iddelete;
+    function showListProduct(){
+        let drawTable=''
+        let classColor=''
+        for (let i = 0; i <productList.length ; i++) {
+            if (i%2==0){
+                classColor='table-warning'
+            }else {
+                classColor='table-info'
+            }
+            drawTable+= `<tr class="${classColor}">
+                         <td>${productList[i].id}</td>
+                         <td>${productList[i].name}</td>
+                         <td>${productList[i].price}</td>
+                         <td class="td_button" ><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="${productList[i].id}"><i class="bi bi-gear"></i></button></td>
+                         <td class="td_button" ><button type="button" class="btn btn-primary"  onclick="delete1(${productList[i].id})"><i class="bi bi-trash"></i></td>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New product</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <div class="form-group">
+<!--                        <label for="recipient-name" class="col-form-label">Recipient:</label>-->
+<!--                        <input type="text" class="form-control" id="edit_name">-->
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">sản phẩm:</label>
+                        <input id="edit_sanpham" class="form-control" id="message-text">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">giá:</label>
+                        <input id="edit_gia" class="form-control" id="message-text">
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button  type="button" class="btn btn-primary" onclick="updateProduct()" data-dismiss="modal" >edit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<tr/>`
+        }
+        document.getElementById('drawTable').innerHTML=drawTable
+        $('#exampleModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('whatever') // Extract info from data-* attributes
+            idupdate=recipient
+            iddelete=recipient
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('.modal-title').text('update product' + recipient)
+            modal.find('.modal-body input').val(recipient)
+        })
+        let td_button=document.getElementsByClassName('td_button');
+        // console.log('namekEY --->', nameKey)
+        if (nameKey===null){
+            for (let i = 0; i <td_button.length ; i++) {
+                td_button[i].style.display='none'
+            }
+        }
+
+    }
+    showListProduct()
+    function createProduct(){
+        let id=productList[productList.length -1].getId()+1;
+        let name = document.getElementById('name').value;
+        let price= document.getElementById('gia').value;
+        if (name.trim()==''&& price.trim()==''){
+            document.getElementById('hienThi').innerHTML
+        }else {
+            let product= new Product(id,name,price);
+            productList.push(product);
+        }
+        showListProduct();
+    }
+    function updateProduct(){
+        let editSanpham=document.getElementById('edit_sanpham').value;
+        let editgia=document.getElementById('edit_gia').value;
+        for (let i = 0; i <productList.length ; i++) {
+            if (productList[i].getId()==idupdate){
+                productList[i].setName(editSanpham);
+                productList[i].setPrice(editgia);
+            }
+        }
+        showListProduct()
+    }
+    function delete1(id) {
+        let check= confirm("bạn có muốn xoá hay không ?")
+        // console.log("list",productList)
+        if(check){
+            for (let i = 0; i < productList.length; i++) {
+                if(productList[i].id==id){
+                    productList.splice(i,1);
+                    showListProduct();
+                }
+            }
+        }
+    }
+
+</script>
+<footer class="bg-light text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a
+                    class="btn text-white btn-floating m-1"
+                    style="background-color: #3b5998;"
+                    href="#!"
+                    role="button"
+            ><i class="bi bi-facebook"></i></i
+                    ></a>
+
+            <!-- Twitter -->
+            <a
+                    class="btn text-white btn-floating m-1"
+                    style="background-color: #55acee;"
+                    href="#!"
+                    role="button"
+            ><i class="bi bi-twitter"></i></i
+                    ></a>
+
+            <!-- Google -->
+            <a
+                    class="btn text-white btn-floating m-1"
+                    style="background-color: #dd4b39;"
+                    href="#!"
+                    role="button"
+            ><i class="bi bi-google"></i></i
+                    ></a>
+
+            <!-- Instagram -->
+            <a
+                    class="btn text-white btn-floating m-1"
+                    style="background-color: #ac2bac;"
+                    href="#!"
+                    role="button"
+            ><i class="bi bi-instagram"></i></i
+                    ></a>
+
+            <!-- Linkedin -->
+            <a
+                    class="btn text-white btn-floating m-1"
+                    style="background-color: #0082ca;"
+                    href="#!"
+                    role="button"
+            ><i class="bi bi-linkedin"></i></i
+                    ></a>
+            <!-- Github -->
+            <a
+                    class="btn text-white btn-floating m-1"
+                    style="background-color: #333333;"
+                    href="#!"
+                    role="button"
+            ><i class="bi bi-github"></i></i
+                    ></a>
+        </section>
+        <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://apple.com/">apple.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!--<script>-->
+<!--    let nameUser=window.localStorage.getItem('name_key');-->
+<!--    if (nameUser!=null){-->
+<!--        document.getElementById('register').innerHTML=''-->
+<!--        document.getElementById('login').innerHTML=''-->
+<!--        document.getElementById('name_user').innerHTML=nameUser-->
+<!--    }-->
+<!--</script>-->
+</body>
+</html>
